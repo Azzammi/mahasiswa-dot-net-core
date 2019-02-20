@@ -1,0 +1,70 @@
+@page
+@model RazorPageMahasiswa.Pages.Mahasiswas.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Mahasiswa</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Mahasiswa.NPM)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mahasiswa.NPM)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Mahasiswa.NamaMahasiswa)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mahasiswa.NamaMahasiswa)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Mahasiswa.TempatLahir)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mahasiswa.TempatLahir)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Mahasiswa.ProgramStudy)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mahasiswa.ProgramStudy)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Mahasiswa.TanggalLahir)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mahasiswa.TanggalLahir)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Mahasiswa.JenisKelamin)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mahasiswa.JenisKelamin)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Mahasiswa.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mahasiswa.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Mahasiswa.Jurusan)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mahasiswa.Jurusan)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Mahasiswa.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

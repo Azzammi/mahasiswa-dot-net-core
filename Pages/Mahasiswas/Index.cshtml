@@ -1,0 +1,78 @@
+@page
+@model RazorPageMahasiswa.Pages.Mahasiswas.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Mahasiswa[0].NPM)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mahasiswa[0].NamaMahasiswa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mahasiswa[0].TempatLahir)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mahasiswa[0].ProgramStudy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mahasiswa[0].TanggalLahir)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mahasiswa[0].JenisKelamin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mahasiswa[0].Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mahasiswa[0].Jurusan)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Mahasiswa) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NPM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NamaMahasiswa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TempatLahir)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProgramStudy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TanggalLahir)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JenisKelamin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Jurusan)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

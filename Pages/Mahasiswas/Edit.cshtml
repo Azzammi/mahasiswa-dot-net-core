@@ -1,0 +1,70 @@
+@page
+@model RazorPageMahasiswa.Pages.Mahasiswas.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Mahasiswa</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Mahasiswa.ID" />
+            <div class="form-group">
+                <label asp-for="Mahasiswa.NPM" class="control-label"></label>
+                <input asp-for="Mahasiswa.NPM" class="form-control" />
+                <span asp-validation-for="Mahasiswa.NPM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mahasiswa.NamaMahasiswa" class="control-label"></label>
+                <input asp-for="Mahasiswa.NamaMahasiswa" class="form-control" />
+                <span asp-validation-for="Mahasiswa.NamaMahasiswa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mahasiswa.TempatLahir" class="control-label"></label>
+                <input asp-for="Mahasiswa.TempatLahir" class="form-control" />
+                <span asp-validation-for="Mahasiswa.TempatLahir" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mahasiswa.ProgramStudy" class="control-label"></label>
+                <input asp-for="Mahasiswa.ProgramStudy" class="form-control" />
+                <span asp-validation-for="Mahasiswa.ProgramStudy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mahasiswa.TanggalLahir" class="control-label"></label>
+                <input asp-for="Mahasiswa.TanggalLahir" class="form-control" />
+                <span asp-validation-for="Mahasiswa.TanggalLahir" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mahasiswa.JenisKelamin" class="control-label"></label>
+                <input asp-for="Mahasiswa.JenisKelamin" class="form-control" />
+                <span asp-validation-for="Mahasiswa.JenisKelamin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mahasiswa.Email" class="control-label"></label>
+                <input asp-for="Mahasiswa.Email" class="form-control" />
+                <span asp-validation-for="Mahasiswa.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mahasiswa.Jurusan" class="control-label"></label>
+                <input asp-for="Mahasiswa.Jurusan" class="form-control" />
+                <span asp-validation-for="Mahasiswa.Jurusan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

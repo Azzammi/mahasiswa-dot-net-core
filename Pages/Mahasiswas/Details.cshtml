@@ -1,0 +1,67 @@
+@page
+@model RazorPageMahasiswa.Pages.Mahasiswas.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Mahasiswa</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Mahasiswa.NPM)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mahasiswa.NPM)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Mahasiswa.NamaMahasiswa)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mahasiswa.NamaMahasiswa)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Mahasiswa.TempatLahir)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mahasiswa.TempatLahir)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Mahasiswa.ProgramStudy)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mahasiswa.ProgramStudy)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Mahasiswa.TanggalLahir)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mahasiswa.TanggalLahir)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Mahasiswa.JenisKelamin)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mahasiswa.JenisKelamin)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Mahasiswa.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mahasiswa.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Mahasiswa.Jurusan)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mahasiswa.Jurusan)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Mahasiswa.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
